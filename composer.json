@@ -1,0 +1,26 @@
+{
+    "name": "combi/combi",
+    "description": "combi project",
+    "keywords": ["framework", "combi", "skeleton"],
+    "license": "LGPL3.0",
+    "authors": [
+        {
+            "name": "Andares Merigold",
+            "email": "andares@outlook.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/andares/combi-core.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "combi/core": "dev-master"
+    },
+    "require-dev": {
+        "nette/tester": "~2.0"
+    },
+    "minimum-stability": "dev"
+}
