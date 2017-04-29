@@ -1,2 +1,5 @@
 /vendor/
+/logs/
+/tmp/
 /composer.lock
+/chord
