@@ -2,8 +2,11 @@
 
 namespace App;
 
-$package = Package::instance(__DIR__);
+use Combi\{
+    Helper as helper,
+    Abort as abort,
+    Core as core
+};
 
-combi()->register($package);
-
-require __DIR__ . DIRECTORY_SEPARATOR . 'helpers.php';
+core::register(Package::create(__DIR__),
+    'helpers');

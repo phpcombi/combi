@@ -1,5 +1,7 @@
+composer.phar
 /vendor/
+/tests/logs/
+/tests/tmp/
+/tests/playground.php
 /logs/
 /tmp/
-/composer.lock
-/chord
