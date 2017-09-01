@@ -24,7 +24,7 @@ use App\{
 class Index extends Groups\Standard
 {
     public static function routes(Router $r) {
-        $r->any('/{nickname}', 'welcome');
+        $r->any('/[{nickname}]', 'welcome');
         $r->prefix('/demo')
             ->get('/login', 'login')
             ->post('/signin', 'signIn')
