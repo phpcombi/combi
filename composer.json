@@ -13,13 +13,14 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "combi/core": "dev-master"
+        "combi/core": "dev-master",
+        "combi/web": "dev-master"
     },
     "require-dev": {
         "nette/tester": "dev-master"
     },
     "autoload": {
-        "psr-4": {"App\\": "src/classes/"},
+        "psr-4": {"": "src/classes/"},
         "files": [
             "src/bootstrap.php"
         ]

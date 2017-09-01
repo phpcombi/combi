@@ -5,8 +5,11 @@ use Combi\{
     Abort as abort,
     Core as core
 };
+use App as inner;
 
-require __DIR__.'/../vendor/autoload.php';
+$loader = include __DIR__.'/../vendor/autoload.php';
 
-core::up('app', require __DIR__.'/../env.php');
+core::up('app', require __DIR__.'/../env..php');
+
+inner::runByCgi();
 

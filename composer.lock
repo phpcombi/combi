@@ -4,82 +4,37 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f617e72c87d9000f8f54614925db515d",
-    "content-hash": "5a26c9dc0cf458e53916ba6b2104111e",
+    "hash": "6f905a5d5bb6fe4d90a23345fc98f120",
+    "content-hash": "e45e4b1390705414bf812d971de66749",
     "packages": [
-        {
-            "name": "andares/adarts",
-            "version": "v1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/andares/adarts.git",
-                "reference": "f4705e31a24b79fe41c8ea8bebc426d425704a15"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/andares/adarts/f4705e31a24b79fe41c8ea8bebc426d425704a15.zip",
-                "reference": "f4705e31a24b79fe41c8ea8bebc426d425704a15",
-                "shasum": ""
-            },
-            "require": {
-                "ext-msgpack": "*",
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "tracy/tracy": "^2.4"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andares Merigold",
-                    "email": "andares@outlook.com"
-                }
-            ],
-            "description": "a darts class",
-            "keywords": [
-                "dart",
-                "darts",
-                "tree",
-                "trie"
-            ],
-            "time": "2017-02-20 04:23:42"
-        },
         {
             "name": "combi/core",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpcombi/core.git",
-                "reference": "830081ab69e4ef1a639e018feac2a8850379c998"
+                "reference": "73fe0068f918127ff5b23370709d1ce520556818"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/phpcombi/core/830081ab69e4ef1a639e018feac2a8850379c998.zip",
-                "reference": "830081ab69e4ef1a639e018feac2a8850379c998",
+                "url": "https://files.phpcomposer.com/files/phpcombi/core/73fe0068f918127ff5b23370709d1ce520556818.zip",
+                "reference": "73fe0068f918127ff5b23370709d1ce520556818",
                 "shasum": ""
             },
             "require": {
-                "andares/adarts": "^1.5",
                 "ext-msgpack": "*",
                 "ext-redis": "*",
-                "monolog/monolog": "1.*",
-                "nette/di": "2.*",
-                "nette/neon": "2.*",
+                "monolog/monolog": "^1.0",
+                "nette/neon": "^2.4",
                 "php": ">=7.1.0",
-                "psr/container": "1.*",
-                "psr/log": "1.*"
+                "psr/container": "^1.0",
+                "psr/log": "^1.0"
             },
             "require-dev": {
                 "nette/tester": "dev-master"
+            },
+            "suggest": {
+                "nette/di": "Allow use service by DI. (need 'nette/di: ^2.4')"
             },
             "type": "library",
             "autoload": {
@@ -106,7 +61,109 @@
                 "framework",
                 "libs"
             ],
-            "time": "2017-08-02 10:36:44"
+            "time": "2017-09-01 06:44:16"
+        },
+        {
+            "name": "combi/web",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpcombi/web.git",
+                "reference": "1f069c412c478161612bc435bf2a38ab34965297"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/phpcombi/web/1f069c412c478161612bc435bf2a38ab34965297.zip",
+                "reference": "1f069c412c478161612bc435bf2a38ab34965297",
+                "shasum": ""
+            },
+            "require": {
+                "combi/core": "dev-master",
+                "fig/http-message-util": "^1.1",
+                "nikic/fast-route": "^1.2",
+                "php": ">=7.1.0",
+                "psr/http-message": "^1.0",
+                "twig/twig": "^2.4"
+            },
+            "require-dev": {
+                "nette/tester": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Combi\\": "src/classes/"
+                },
+                "files": [
+                    "src/bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MPL2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andares Merigold",
+                    "email": "andares@outlook.com"
+                }
+            ],
+            "description": "combi web-kits",
+            "keywords": [
+                "framework",
+                "libs",
+                "web"
+            ],
+            "time": "2017-09-01 07:19:57"
+        },
+        {
+            "name": "fig/http-message-util",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message-util.git",
+                "reference": "20b2c280cb6914b7b83089720df44e490f4b42f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/php-fig/http-message-util/20b2c280cb6914b7b83089720df44e490f4b42f0.zip",
+                "reference": "20b2c280cb6914b7b83089720df44e490f4b42f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3 || ^7.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fig\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Utility classes and constants for use with PSR-7 (psr/http-message)",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2017-02-09 16:10:21"
         },
         {
             "name": "monolog/monolog",
@@ -187,66 +244,6 @@
             "time": "2017-06-19 01:22:40"
         },
         {
-            "name": "nette/di",
-            "version": "v2.4.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/di.git",
-                "reference": "25437788ff126d0ae6b1f2f684ecdd823812abba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/nette/di/25437788ff126d0ae6b1f2f684ecdd823812abba.zip",
-                "reference": "25437788ff126d0ae6b1f2f684ecdd823812abba",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "nette/neon": "^2.3.3 || ~3.0.0",
-                "nette/php-generator": "^2.6.1 || ~3.0.0",
-                "nette/utils": "^2.4.3 || ~3.0.0",
-                "php": ">=5.6.0"
-            },
-            "conflict": {
-                "nette/bootstrap": "<2.4",
-                "nette/nette": "<2.2"
-            },
-            "require-dev": {
-                "nette/tester": "^2.0",
-                "tracy/tracy": "^2.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0",
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "Nette Dependency Injection Component",
-            "homepage": "https://nette.org",
-            "time": "2017-07-11 17:55:11"
-        },
-        {
             "name": "nette/neon",
             "version": "v2.4.2",
             "source": {
@@ -301,129 +298,47 @@
             "time": "2017-07-11 18:29:08"
         },
         {
-            "name": "nette/php-generator",
-            "version": "v3.0.1",
+            "name": "nikic/fast-route",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nette/php-generator.git",
-                "reference": "eb2dbc9c3409e9db40568109ca4994d51373b60c"
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "b5f95749071c82a8e0f58586987627054400cdf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/nette/php-generator/eb2dbc9c3409e9db40568109ca4994d51373b60c.zip",
-                "reference": "eb2dbc9c3409e9db40568109ca4994d51373b60c",
+                "url": "https://files.phpcomposer.com/files/nikic/FastRoute/b5f95749071c82a8e0f58586987627054400cdf6.zip",
+                "reference": "b5f95749071c82a8e0f58586987627054400cdf6",
                 "shasum": ""
             },
             "require": {
-                "nette/utils": "^2.4.2 || ~3.0.0",
-                "php": ">=7.0"
-            },
-            "conflict": {
-                "nette/nette": "<2.2"
-            },
-            "require-dev": {
-                "nette/tester": "^2.0",
-                "tracy/tracy": "^2.3"
+                "php": ">=5.4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
             "autoload": {
-                "classmap": [
-                    "src/"
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause",
-                "GPL-2.0",
-                "GPL-3.0"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
                 }
             ],
-            "description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 7.1 features.",
-            "homepage": "https://nette.org",
+            "description": "Fast request router for PHP",
             "keywords": [
-                "code",
-                "nette",
-                "php",
-                "scaffolding"
+                "router",
+                "routing"
             ],
-            "time": "2017-07-11 19:07:13"
-        },
-        {
-            "name": "nette/utils",
-            "version": "v2.4.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/utils.git",
-                "reference": "2750d3948e255f59715a5e01c7453a1fec610996"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/nette/utils/2750d3948e255f59715a5e01c7453a1fec610996.zip",
-                "reference": "2750d3948e255f59715a5e01c7453a1fec610996",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0"
-            },
-            "conflict": {
-                "nette/nette": "<2.2"
-            },
-            "require-dev": {
-                "nette/tester": "~2.0",
-                "tracy/tracy": "^2.3"
-            },
-            "suggest": {
-                "ext-gd": "to use Image",
-                "ext-iconv": "to use Strings::webalize() and toAscii()",
-                "ext-intl": "for script transliteration in Strings::webalize() and toAscii()",
-                "ext-json": "to use Nette\\Utils\\Json",
-                "ext-mbstring": "to use Strings::lower() etc...",
-                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0",
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
-                }
-            ],
-            "description": "Nette Utility Classes",
-            "homepage": "https://nette.org",
-            "time": "2017-07-11 19:25:29"
+            "time": "2017-01-19 11:35:12"
         },
         {
             "name": "psr/container",
@@ -475,6 +390,56 @@
             "time": "2017-02-14 16:28:37"
         },
         {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/php-fig/http-message/f6561bf28d520154e4b0ec72be95418abe6d9363.zip",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06 14:39:51"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -520,6 +485,131 @@
                 "psr-3"
             ],
             "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/polyfill-mbstring/7c8fae0ac1d216eb54349e6a8baa57d515fe8803.zip",
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2017-06-14 15:44:48"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/twigphp/Twig/eab7c3288ae6603d7d6f92b531626af2b162d1f2.zip",
+                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~3.3@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2017-06-07 18:47:58"
         }
     ],
     "packages-dev": [
@@ -529,12 +619,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tester.git",
-                "reference": "900febd77046ba9018720dbae0946db9ec37b50f"
+                "reference": "a602a9789ca7c0aacbca902bb9527793d0eb2039"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/nette/tester/900febd77046ba9018720dbae0946db9ec37b50f.zip",
-                "reference": "900febd77046ba9018720dbae0946db9ec37b50f",
+                "url": "https://files.phpcomposer.com/files/nette/tester/a602a9789ca7c0aacbca902bb9527793d0eb2039.zip",
+                "reference": "a602a9789ca7c0aacbca902bb9527793d0eb2039",
                 "shasum": ""
             },
             "require": {
@@ -583,13 +673,14 @@
                 "testing",
                 "unit"
             ],
-            "time": "2017-07-31 20:43:15"
+            "time": "2017-08-29 13:43:27"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "combi/core": 20,
+        "combi/web": 20,
         "nette/tester": 20
     },
     "prefer-stable": false,
