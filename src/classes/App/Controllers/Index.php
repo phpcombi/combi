@@ -24,7 +24,7 @@ use App\{
 class Index extends Groups\Standard
 {
     public static function routes(Router $r) {
-        $r->any('/', 'welcome');
+        $r->any('/{nickname}', 'welcome');
         $r->prefix('/demo')
             ->get('/login', 'login')
             ->post('/signin', 'signIn')
@@ -36,27 +36,27 @@ class Index extends Groups\Standard
         parent::middlewares();
     }
 
-    public function welcome(Request $request, Response $response) {
+    public function welcome(Request $request, Response $response, array $path_vars) {
+        $nickname = isset($path_vars['nickname']) ? " [{$path_vars['nickname']}]" : '';
         $data = [
-            'title' => '欢迎使用 PHP\Combi',
+            'title' => "Welcome to choose PHP\Combi$nickname",
         ];
-        return $response->withView('welcome.html', $data, $this->action->getView());
+        return $response->withView('welcome.html', $data);
     }
 
-    public function getList(Request $request, Response $response,
-        array $path_vars)
+    public function signUp(Request $request, Response $response)
     {
-        return $response->withView('user/list.html');
     }
 
-    public function signIn() {
-
+    public function signIn(Request $request, Response $response) {
+        $nickname = $request['nickname'];
+        return $response->withRedirect("/$nickname");
     }
 
-    public function login() {
+    public function login(Request $request, Response $response) {
         $data = [
-            'title' => '欢迎使用 PHP\Combi',
+            'title' => 'Login Demo',
         ];
-        return $response->withView('welcome.html', $data, $this->action->getView());
+        return $response->withView('demo/login.html', $data);
     }
 }

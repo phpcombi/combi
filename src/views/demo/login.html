@@ -1,0 +1,18 @@
+{% extends "frame.html" %}
+
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    {{ parent() }}
+    <form action="/demo/signin" method="post">
+        <div>
+            <div>Nickname</div>
+            <div><input type="text" name="nickname" /></div>
+        </div>
+        <div>
+            <input type="submit" value="登录" />
+        </div>
+    </form>
+{% endblock %}

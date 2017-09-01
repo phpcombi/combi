@@ -69,12 +69,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpcombi/web.git",
-                "reference": "1f069c412c478161612bc435bf2a38ab34965297"
+                "reference": "aa1fdd7f1f506f05e9ebee5d6b1afeb16d042013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/phpcombi/web/1f069c412c478161612bc435bf2a38ab34965297.zip",
-                "reference": "1f069c412c478161612bc435bf2a38ab34965297",
+                "url": "https://files.phpcomposer.com/files/phpcombi/web/aa1fdd7f1f506f05e9ebee5d6b1afeb16d042013.zip",
+                "reference": "aa1fdd7f1f506f05e9ebee5d6b1afeb16d042013",
                 "shasum": ""
             },
             "require": {
@@ -113,7 +113,7 @@
                 "libs",
                 "web"
             ],
-            "time": "2017-09-01 07:19:57"
+            "time": "2017-09-01 08:23:35"
         },
         {
             "name": "fig/http-message-util",
