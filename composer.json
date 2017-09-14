@@ -20,7 +20,7 @@
         "nette/tester": "dev-master"
     },
     "autoload": {
-        "psr-4": {"": "src/classes/"},
+        "psr-4": {"App\\": "src/classes/"},
         "files": [
             "src/bootstrap.php"
         ]

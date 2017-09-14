@@ -3,13 +3,12 @@
 use Combi\{
     Helper as helper,
     Abort as abort,
-    Core as core
+    Runtime as rt
 };
-use App as inner;
 
 $loader = include __DIR__.'/../vendor/autoload.php';
 
-core::up('app', require __DIR__.'/../env.php');
+rt::up('app', require __DIR__.'/../env.php');
 
-inner::runByCgi();
+rt::app()->runByCgi();
 

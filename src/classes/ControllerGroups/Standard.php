@@ -5,10 +5,8 @@ namespace App\ControllerGroups;
 use Combi\{
     Helper as helper,
     Abort as abort,
-    Core as core
+    Runtime as rt
 };
-
-use App as inner;
 
 use Combi\Web\{
     Controller

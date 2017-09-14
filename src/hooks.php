@@ -5,11 +5,12 @@ namespace App;
 use Combi\{
     Helper as helper,
     Abort as abort,
-    Core as core
+    Core,
+    Runtime as rt
 };
 
-core::hook()->attach(\Combi\HOOK_ACTION_BROKEN,
-    function(core\Action $action, \Throwable $e)
+rt::core()->hook()->attach(\Combi\HOOK_ACTION_BROKEN,
+    function(Core\Action $action, \Throwable $e)
 {
     $error_info = [
         'error' => $e->getCode(),

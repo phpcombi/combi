@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6f905a5d5bb6fe4d90a23345fc98f120",
+    "hash": "d7b0869d2e30e1cddb834e81d1d24f77",
     "content-hash": "e45e4b1390705414bf812d971de66749",
     "packages": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpcombi/core.git",
-                "reference": "1769cbaaf068902372298e0e54898e1a02d97e83"
+                "reference": "a2b2052081c3665b0b3cbd68c2a054a8850177ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/phpcombi/core/1769cbaaf068902372298e0e54898e1a02d97e83.zip",
-                "reference": "1769cbaaf068902372298e0e54898e1a02d97e83",
+                "url": "https://files.phpcomposer.com/files/phpcombi/core/a2b2052081c3665b0b3cbd68c2a054a8850177ec.zip",
+                "reference": "a2b2052081c3665b0b3cbd68c2a054a8850177ec",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "framework",
                 "libs"
             ],
-            "time": "2017-09-06 10:42:43"
+            "time": "2017-09-14 03:28:57"
         },
         {
             "name": "combi/web",
@@ -70,12 +70,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpcombi/web.git",
-                "reference": "aa1fdd7f1f506f05e9ebee5d6b1afeb16d042013"
+                "reference": "f7566eb161f70208eb4c9b60e11ef1fc07951e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/phpcombi/web/aa1fdd7f1f506f05e9ebee5d6b1afeb16d042013.zip",
-                "reference": "aa1fdd7f1f506f05e9ebee5d6b1afeb16d042013",
+                "url": "https://files.phpcomposer.com/files/phpcombi/web/f7566eb161f70208eb4c9b60e11ef1fc07951e41.zip",
+                "reference": "f7566eb161f70208eb4c9b60e11ef1fc07951e41",
                 "shasum": ""
             },
             "require": {
@@ -92,7 +92,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Combi\\": "src/classes/"
+                    "Combi\\Web\\": "src/classes/"
                 },
                 "files": [
                     "src/bootstrap.php"
@@ -114,7 +114,7 @@
                 "libs",
                 "web"
             ],
-            "time": "2017-09-01 08:23:35"
+            "time": "2017-09-14 04:25:08"
         },
         {
             "name": "fig/http-message-util",
@@ -668,12 +668,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tester.git",
-                "reference": "a602a9789ca7c0aacbca902bb9527793d0eb2039"
+                "reference": "c4f81338bfac6b4e8a3ae13c78516a29123d832a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/nette/tester/a602a9789ca7c0aacbca902bb9527793d0eb2039.zip",
-                "reference": "a602a9789ca7c0aacbca902bb9527793d0eb2039",
+                "url": "https://files.phpcomposer.com/files/nette/tester/c4f81338bfac6b4e8a3ae13c78516a29123d832a.zip",
+                "reference": "c4f81338bfac6b4e8a3ae13c78516a29123d832a",
                 "shasum": ""
             },
             "require": {
@@ -722,7 +722,7 @@
                 "testing",
                 "unit"
             ],
-            "time": "2017-08-29 13:43:27"
+            "time": "2017-09-10 15:52:48"
         }
     ],
     "aliases": [],
